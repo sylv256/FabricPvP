@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "fabricpvp",
   "version": "${version}",
 
   "name": "Example Mod",
@@ -13,23 +13,23 @@
     "sources": "https://github.com/FabricMC/fabric-example-mod"
   },
 
-  "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "license": "Apache 2",
+  "icon": "assets/fabricpvp/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "io.github.tehcjs.fabricpvp.FabricPvP"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "fabricpvp.mixins.json"
   ],
 
   "depends": {
     "fabricloader": ">=0.7.4"
   },
-  "suggests": {
-    "flamingo": "*"
+  "breaks": {
+    "optifabric": "*"
   }
 }
