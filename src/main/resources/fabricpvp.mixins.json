@@ -4,6 +4,8 @@
   "package": "io.github.tehcjs.fabricpvp.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "RealmsBridgeMixin",
+    "TitleScreenMixin"
   ],
   "injectors": {
     "defaultRequire": 1
