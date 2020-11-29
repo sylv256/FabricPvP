@@ -14,7 +14,7 @@ public abstract class Module {
 
 	// initialize every module
 	static {
-		for (var c : Module.class.getClasses()) {
+		for (Class<?> c : Module.class.getClasses()) {
 			try {
 				INSTANCE = (Module) c.newInstance();
 				MODULES.add(INSTANCE);
