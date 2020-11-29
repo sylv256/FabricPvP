@@ -1,16 +1,11 @@
-# Fabric Example Mod
+# Fabric PvP Client
 
-## Setup
-
-1. Edit build.gradle and mod.json to suit your needs.
-    * The "mixins" object can be removed from mod.json if you do not need to use mixins.
-    * Please replace all occurences of "modid" with your own mod ID - sometimes, a different string may also suffice.
-2. Run the following command:
-
-```
-./gradlew idea
-```
+## About
+The main goal of this project are:
+1. An Optimised Client
+2. Shader support
+3. Easy to use
 
 ## License
 
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+This project is under the Apache v2 Licence.
