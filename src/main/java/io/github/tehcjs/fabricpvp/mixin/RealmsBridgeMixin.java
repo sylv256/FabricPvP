@@ -15,7 +15,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public class RealmsBridgeMixin {
 
     @Inject(method = "getNotificationScreen", at = @At("HEAD"), cancellable = true)
-    private void no(Screen screen, CallbackInfoReturnable<RealmsScreenProxy> cir){
+    private void no(Screen screen, CallbackInfoReturnable<RealmsScreenProxy> cir) {
         cir.setReturnValue(null);
     }
 
