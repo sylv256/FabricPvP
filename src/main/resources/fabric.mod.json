@@ -3,14 +3,14 @@
   "id": "fabricpvp",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "FabricPvP",
+  "description": "A PvP Minecraft client made for use with the Legacy Fabric Minecraft mod loader.",
   "authors": [
-    "Me!"
+    "TehcJS",
+    "hydos"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "sources": "https://github.com/TehcJS/FabricPvP"
   },
 
   "license": "Apache 2",
