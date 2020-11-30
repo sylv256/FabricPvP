@@ -1,7 +1,7 @@
 package io.github.hydos.screenss;
 
 import cz.vutbr.web.css.*;
-import io.github.hydos.screenss.widget.CssButtonWidget;
+import io.github.hydos.screenss.widget.CssWidget;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.util.Identifier;
 import org.apache.commons.io.IOUtils;
@@ -20,7 +20,7 @@ public abstract class CSSScreen extends Screen {
 	public static final Logger LOGGER = LogManager.getLogger("Css Screens");
 
 	private final Map<String, RuleSet> cachedCssRules = new HashMap<>();
-	public final List<CssButtonWidget> cssWidgets = new ArrayList<>();
+	public final List<CssWidget> cssWidgets = new ArrayList<>();
 
 	public CSSScreen(Identifier styleSheet) {
 		try {
