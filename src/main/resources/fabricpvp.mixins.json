@@ -4,6 +4,9 @@
   "package": "io.github.tehcjs.fabricpvp.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "AbstractClientPlayerEntityMixin",
+    "EntityMixin",
+    "EntityRendererMixin",
     "RealmsBridgeMixin",
     "TitleScreenMixin"
   ],
