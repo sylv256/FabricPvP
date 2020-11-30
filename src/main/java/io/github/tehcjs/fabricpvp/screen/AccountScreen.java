@@ -62,20 +62,20 @@ public class AccountScreen extends Screen {
         this.password.render();
         switch (loginStatus) {
             case 0:
-                drawCenteredString("Put in login info", this.width / 2 - 100, 66, 0xFFFFFFFF);
+                drawCenteredString("Put in login info", this.width / 2, 66, 0xFFFFFFFF);
                 break;
             case 1:
-                drawCenteredString("Login Failed!", this.width / 2 - 100, 66, 0xFFFF0000);
+                drawCenteredString("Login Failed!", this.width / 2, 66, 0xFFFF0000);
                 break;
             case 2:
-                drawCenteredString("Login Success!", this.width / 2 - 100, 66, 0xFF00FF00);
+                drawCenteredString("Login Success!", this.width / 2, 66, 0xFF00FF00);
                 break;
         }
         super.render(mouseX, mouseY, delta);
     }
 
     public void drawCenteredString(String text, int x, int y, int colour) {
-        this.textRenderer.draw(text, x + textRenderer.getStringWidth(text), y, colour);
+        this.textRenderer.draw(text, x - (textRenderer.getStringWidth(text)/2), y, colour);
     }
 
     @Override
