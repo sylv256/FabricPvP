@@ -23,7 +23,8 @@
     ]
   },
   "mixins": [
-    "fabricpvp.mixins.json"
+    "fabricpvp.mixins.json",
+    "fabricpvp.chunk_optimizations.mixins.json"
   ],
   "accessWidener": "fabricpvp.aw",
   "depends": {
