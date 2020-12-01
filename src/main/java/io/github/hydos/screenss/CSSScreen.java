@@ -43,7 +43,7 @@ public abstract class CSSScreen extends Screen {
 		super.render(mouseX, mouseY, delta);
 	}
 
-	public Map<String, RuleSet> getCache(){
+	public Map<String, RuleSet> getCache() {
 		return cachedCssRules;
 	}
 

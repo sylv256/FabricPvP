@@ -14,6 +14,7 @@ public class FakeClientPlayerEntity extends ClientPlayerEntity {
 
 	/**
 	 * force renderer to render this player thanks {@link net.minecraft.client.render.entity.PlayerEntityRenderer} line 47
+	 *
 	 * @return false
 	 */
 	@Override
@@ -23,6 +24,7 @@ public class FakeClientPlayerEntity extends ClientPlayerEntity {
 
 	/**
 	 * a network manager has not been initialized. notchjank 100. why is that in the network manager
+	 *
 	 * @return false
 	 */
 	@Override

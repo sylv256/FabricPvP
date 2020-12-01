@@ -3,7 +3,6 @@ package io.github.tehcjs.fabricpvp.screen;
 import io.github.hydos.screenss.CSSScreen;
 import io.github.hydos.screenss.widget.CssButtonWidget;
 import net.minecraft.client.MinecraftClient;
-import net.minecraft.util.Identifier;
 
 import static io.github.tehcjs.fabricpvp.utilities.Util.id;
 

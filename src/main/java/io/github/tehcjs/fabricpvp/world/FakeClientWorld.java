@@ -19,7 +19,7 @@ public class FakeClientWorld extends ClientWorld {
 				screen,
 				new ClientConnection(NetworkSide.CLIENTBOUND),
 				gameProfile
-				), new LevelInfo(
+		), new LevelInfo(
 				0L,
 				LevelInfo.GameMode.CREATIVE,
 				false,
