@@ -17,6 +17,23 @@ public class FabricPvP implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		// init modules
+		// todo tell oracle to un-deprecate their cursed reflection api
+		Reflections reflections = new Reflections("io.github.tehcjs." + MOD_ID);
+		for (Class<?> c : reflections.getSubTypesOf(Module.class)) {
+			try {
+				Field instanceField = c.getDeclaredField("INSTANCE");
+				instanceField.setAccessible(true);
+				Module instance = (Module) instanceField.get(null);
+
+				Method registerMethod = c.getMethod("register");
+				registerMethod.setAccessible(true);
+				registerMethod.invoke(instance);
+			} catch (NoSuchFieldException | IllegalAccessException
+					| NoSuchMethodException | InvocationTargetException e) {
+				e.printStackTrace();
+			}
+		}
 	}
 
 	public static void log(Level level, String message) {
