@@ -51,6 +51,9 @@ dependencies {
 	implementation 'net.sf.cssbox:jstyleparser:3.5'
 	compile 'net.sf.cssbox:jstyleparser:3.5'
 
+	// ew reflection :vomiting:
+	implementation 'org.reflections:reflections:0.9.12'
+
 	// mac is bad
 	implementation 'org.lwjgl.lwjgl:lwjgl_util:2.9.4-nightly-20150209'
 	implementation 'org.lwjgl.lwjgl:lwjgl:2.9.4-nightly-20150209'
