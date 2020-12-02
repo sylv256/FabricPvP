@@ -7,6 +7,7 @@
     "AbstractClientPlayerEntityMixin",
     "EntityMixin",
     "EntityRendererMixin",
+    "MinecraftClientMixin",
     "RealmsBridgeMixin",
     "TitleScreenMixin"
   ],

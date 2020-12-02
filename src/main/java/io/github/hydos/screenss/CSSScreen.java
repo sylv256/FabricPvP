@@ -28,9 +28,10 @@ public abstract class CSSScreen extends Screen {
 			LOGGER.fatal("An IO or CSS Exception has occurred while trying to read the style sheet!");
 			e.printStackTrace();
 		}
+
 	}
 
-	public void postInit(){
+	public void calculateLocations(){
 		parser.calculatePositions();
 	}
 
@@ -38,6 +39,7 @@ public abstract class CSSScreen extends Screen {
 	public void init(MinecraftClient client, int width, int height) {
 		super.init(client, width, height);
 		parser = new RealCssParser(this.width, this.height, stylesheet);
+		CSSSEvents.WINDOW_RESIZED.register(client2 -> parser.onScreenResize(client.width, client.height));
 	}
 
 	@Override

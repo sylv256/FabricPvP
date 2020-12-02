@@ -1,5 +1,9 @@
 package io.github.hydos.realcssparser;
 
+import io.github.hydos.screenss.CssSelector;
+import org.w3c.dom.css.CSSRule;
+import org.w3c.dom.css.CSSRuleList;
+import org.w3c.dom.css.CSSStyleRule;
 import org.w3c.dom.css.CSSStyleSheet;
 
 import java.util.HashMap;
@@ -13,66 +17,70 @@ import java.util.Map;
  */
 public class RealCssParser {
 
-    private final CSSStyleSheet styleSheet;
-    private int screenWidth;
-    private int screenHeight;
+	private final CSSStyleSheet styleSheet;
+	private int screenWidth;
+	private int screenHeight;
 
-    private final Map<String, ElementData> cachedElements = new HashMap<>();
+	private final Map<String, ElementData> cachedElements = new HashMap<>();
 
-    public RealCssParser(int screenWidth, int screenHeight, CSSStyleSheet styleSheet) {
-        this.screenWidth = screenWidth;
-        this.screenHeight = screenHeight;
-        this.styleSheet = styleSheet;
-    }
+	public RealCssParser(int screenWidth, int screenHeight, CSSStyleSheet styleSheet) {
+		this.screenWidth = screenWidth;
+		this.screenHeight = screenHeight;
+		this.styleSheet = styleSheet;
+	}
 
-    public void addElement(String cssSelector, String id) {
-        cachedElements.put(id, new ElementData(cssSelector));
-    }
+	public void addElement(CssSelector cssSelector, String id) {
+		cachedElements.put(id, new ElementData(cssSelector));
+	}
 
-    public void clearOldData() {
-        cachedElements.clear();
-    }
+	public void clearOldData() {
+		cachedElements.clear();
+	}
 
-    public void onScreenResize(int screenWidth, int screenHeight) {
-        this.screenWidth = screenWidth;
-        this.screenHeight = screenHeight;
-        calculatePositions();
-    }
+	public void onScreenResize(int screenWidth, int screenHeight) {
+		this.screenWidth = screenWidth;
+		this.screenHeight = screenHeight;
+		calculatePositions();
+	}
 
-    public void calculatePositions() {
-        cachedElements.values().forEach(element -> {
-            //TODO: yes
-            System.out.println(screenHeight);
-            System.out.println(screenWidth);
-            System.out.println(styleSheet);
-        });
-    }
+	public void calculatePositions() {
+		cachedElements.values().forEach(element -> {
+			CSSRuleList ruleList = styleSheet.getCssRules();
+			for (int i = 0; i < ruleList.getLength(); i++) {
+				CSSRule rule = ruleList.item(i);
+				if (rule instanceof CSSStyleRule) {
+					CSSStyleRule styleRule = (CSSStyleRule) rule;
+					System.out.println(styleRule.getSelectorText());
+				}
+			}
+		});
+	}
 
-    public ElementData getData(String id) {
-        return cachedElements.get(id);
-    }
+	public ElementData getData(String id) {
+		return cachedElements.get(id);
+	}
 
-    private static class ElementData {
-        private final String cssSelector;
-        public String xPos;
-        public String yPos;
+	public static class ElementData {
+		private final CssSelector cssSelector;
+		public int xPos;
+		public int yPos;
 
-        public ElementData(String cssSelector) {
-            this.cssSelector = cssSelector;
-        }
+		public ElementData(CssSelector cssSelector) {
+			this.cssSelector = cssSelector;
+		}
 
-        public String getCssSelector() {
-            return cssSelector;
-        }
+		public CssSelector getCssSelector() {
+			return cssSelector;
+		}
 
-        public String getxPos() {
-            return xPos;
-        }
+		public int getxPos() {
+			return xPos;
+		}
 
-        public String getyPos() {
-            return yPos;
-        }
-    }
+		public int getyPos() {
+			return yPos;
+		}
+	}
 }
 
 //public class CSSParserTest
