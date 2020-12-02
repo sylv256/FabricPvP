@@ -1,7 +1,6 @@
 package io.github.tehcjs.fabricpvp.mixin;
 
 import com.mojang.authlib.GameProfile;
-import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.network.AbstractClientPlayerEntity;
 import net.minecraft.client.network.PlayerListEntry;
 import org.spongepowered.asm.mixin.Mixin;
@@ -15,10 +14,11 @@ import java.util.UUID;
 @Mixin(AbstractClientPlayerEntity.class)
 public class AbstractClientPlayerEntityMixin {
 
-	@Shadow private PlayerListEntry cachedScoreboardEntry;
+	@Shadow
+	private PlayerListEntry cachedScoreboardEntry;
 
 	@Inject(method = "getPlayerListEntry", at = @At("HEAD"), cancellable = true)
-	private void supportFakeEntities(CallbackInfoReturnable<PlayerListEntry> cir){
+	private void supportFakeEntities(CallbackInfoReturnable<PlayerListEntry> cir) {
 		if (this.cachedScoreboardEntry == null) {
 			this.cachedScoreboardEntry = new PlayerListEntry(new GameProfile(UUID.randomUUID(), "E A SPORTS"));
 		}

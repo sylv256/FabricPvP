@@ -10,8 +10,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public class EntityMixin {
 
 	@Inject(method = "squaredDistanceTo(Lnet/minecraft/entity/Entity;)D", at = @At("HEAD"), cancellable = true)
-	private void returnZeroIfNull(Entity entity, CallbackInfoReturnable<Double> cir){
-		if(entity == null) {
+	private void returnZeroIfNull(Entity entity, CallbackInfoReturnable<Double> cir) {
+		if (entity == null) {
 			cir.setReturnValue(0D);
 		}
 	}

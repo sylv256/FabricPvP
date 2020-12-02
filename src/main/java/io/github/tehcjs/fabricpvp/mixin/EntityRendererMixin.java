@@ -12,7 +12,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public class EntityRendererMixin {
 
 	@Inject(method = "getFontRenderer", at = @At("HEAD"), cancellable = true)
-	private void returnRealFontRenderer(CallbackInfoReturnable<TextRenderer> cir){
+	private void returnRealFontRenderer(CallbackInfoReturnable<TextRenderer> cir) {
 		cir.setReturnValue(MinecraftClient.getInstance().textRenderer);
 	}
 
