@@ -1,7 +1,7 @@
 package io.github.tehcjs.fabricpvp.mixin;
 
+import io.github.tehcjs.fabricpvp.screen.CosmeticEditorScreen;
 import io.github.tehcjs.fabricpvp.screen.AccountScreen;
-import io.github.tehcjs.fabricpvp.screen.CSSTestScreen;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.screen.TitleScreen;
 import net.minecraft.client.gui.widget.ButtonWidget;
@@ -29,7 +29,7 @@ public class TitleScreenMixin extends Screen implements IdentifibleBooleanConsum
 			ci.cancel();
 		}
 		if (button.id == 100) {
-			this.client.openScreen(new CSSTestScreen());
+			this.client.openScreen(new CosmeticEditorScreen());
 		}
 	}
 }
