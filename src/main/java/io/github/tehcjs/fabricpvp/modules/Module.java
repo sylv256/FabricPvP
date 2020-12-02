@@ -8,13 +8,12 @@ import java.util.List;
 
 import static io.github.tehcjs.fabricpvp.utilities.Util.trans;
 
-public abstract class Module {
-	private static final List<Module> MODULES = new ArrayList<>();
-
-	public TranslatableText getName() {
+public interface Module {
+	default TranslatableText getName() {
 		return trans(this.getId().getPath());
 	}
 
-	public abstract Identifier getId();
-	public abstract void register();
+	Identifier getId();
+
+	void register();
 }
