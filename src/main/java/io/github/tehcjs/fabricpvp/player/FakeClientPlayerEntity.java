@@ -15,7 +15,6 @@ public class FakeClientPlayerEntity extends ClientPlayerEntity {
 
 	public FakeClientPlayerEntity(MinecraftClient client, FakeClientWorld world) {
 		super(client, world, world.getNetHandler(), new StatHandler());
-		loadSkin(getSkinTexture(), getName().asString());
 	}
 
 	/**
