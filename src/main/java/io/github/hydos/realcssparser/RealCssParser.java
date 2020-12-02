@@ -50,7 +50,9 @@ public class RealCssParser {
 				CSSRule rule = ruleList.item(i);
 				if (rule instanceof CSSStyleRule) {
 					CSSStyleRule styleRule = (CSSStyleRule) rule;
-					System.out.println(styleRule.getSelectorText());
+					if(styleRule.getSelectorText().equals(element.cssSelector.toString())){
+						System.out.println(styleRule.getStyle());
+					}
 				}
 			}
 		});
