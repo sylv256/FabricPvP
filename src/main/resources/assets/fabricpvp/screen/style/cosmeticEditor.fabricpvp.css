@@ -1,11 +1,5 @@
 .test_selector {
 	position: fixed;
-	top: 50%;
+	top: 1%;
 	left: 50%;
-}
-
-.cosmeticSelection {
-	position: fixed;
-	top: 50%;
-	right: 50%;
 }

@@ -1,6 +1,6 @@
 package io.github.tehcjs.fabricpvp.screen;
 
-import io.github.hydos.screenss.CSSScreen;
+import io.github.hydos.cscerns.minecraft.CSSScreen;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.entity.model.PlayerEntityModel;
 import net.minecraft.util.Identifier;

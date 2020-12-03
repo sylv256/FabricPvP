@@ -1,7 +1,7 @@
-package io.github.hydos.screenss;
+package io.github.hydos.cscerns.minecraft;
 
 import com.steadystate.css.parser.CSSOMParser;
-import io.github.hydos.realcssparser.RealCssParser;
+import io.github.hydos.cscerns.css.RealCssParser;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.util.Identifier;

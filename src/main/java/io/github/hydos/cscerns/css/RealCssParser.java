@@ -1,8 +1,8 @@
-package io.github.hydos.realcssparser;
+package io.github.hydos.cscerns.css;
 
-import io.github.hydos.screenss.CssMath;
-import io.github.hydos.screenss.CssProperties;
-import io.github.hydos.screenss.CssSelector;
+import io.github.hydos.cscerns.minecraft.CssMath;
+import io.github.hydos.cscerns.minecraft.CssProperties;
+import io.github.hydos.cscerns.minecraft.CssSelector;
 import org.w3c.dom.css.*;
 
 import java.util.HashMap;
@@ -53,7 +53,6 @@ public class RealCssParser {
 						CSSStyleDeclaration styleDecl = styleRule.getStyle();
 						for (int j = 0; j < styleDecl.getLength(); j++) {
 							CssProperties.Position positionType = CssProperties.Position.STATIC;
-
 							String property = styleDecl.item(j);
 							String value = styleDecl.getPropertyCSSValue(property).getCssText();
 
@@ -62,16 +61,16 @@ public class RealCssParser {
 									positionType = CssProperties.Position.valueOf(value.toUpperCase());
 									break;
 								case "left":
-									element.xPos = getOffset(value, screenWidth) - (element.width/2);
+									element.xPos = getOffset(value, screenWidth) - (element.width / 2);
 									break;
 								case "right":
-									element.xPos = screenWidth - getOffset(value, screenWidth) - (element.width/2);
+									element.xPos = screenWidth - getOffset(value, screenWidth) - (element.width / 2);
 									break;
 								case "top":
-									element.yPos = getOffset(value, screenHeight) - (element.height/2);
+									element.yPos = getOffset(value, screenHeight) - (element.height / 2);
 									break;
 								case "bottom":
-									element.yPos = screenHeight - getOffset(value, screenHeight) - (element.height/2);
+									element.yPos = screenHeight - getOffset(value, screenHeight) - (element.height / 2);
 									break;
 							}
 						}

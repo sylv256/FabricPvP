@@ -1,4 +1,4 @@
-package io.github.hydos.screenss;
+package io.github.hydos.cscerns.minecraft;
 
 public class CssMath {
 

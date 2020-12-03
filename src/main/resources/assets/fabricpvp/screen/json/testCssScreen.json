@@ -1,0 +1,10 @@
+{
+  "elements": [
+    {
+      "type": "button",
+      "id": 0,
+      "classes": ["test_button"],
+      "children": []
+    }
+  ]
+}

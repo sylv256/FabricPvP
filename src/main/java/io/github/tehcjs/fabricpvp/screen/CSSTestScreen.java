@@ -1,8 +1,8 @@
 package io.github.tehcjs.fabricpvp.screen;
 
-import io.github.hydos.realcssparser.RealCssParser;
-import io.github.hydos.screenss.CSSScreen;
-import io.github.hydos.screenss.CssSelector;
+import io.github.hydos.cscerns.css.RealCssParser;
+import io.github.hydos.cscerns.minecraft.CSSScreen;
+import io.github.hydos.cscerns.minecraft.CssSelector;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.widget.ButtonWidget;
 
