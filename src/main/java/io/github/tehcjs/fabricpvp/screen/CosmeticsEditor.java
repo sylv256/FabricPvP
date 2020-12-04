@@ -1,6 +1,6 @@
 package io.github.tehcjs.fabricpvp.screen;
 
-import io.github.hydos.cscerns.minecraft.CSSScreen;
+import io.github.hydos.cscerns.misc.CSSScreen;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.entity.model.PlayerEntityModel;
 import net.minecraft.util.Identifier;
@@ -11,7 +11,7 @@ public class CosmeticsEditor extends CSSScreen {
 	public PlayerEntityModel playerModel = new PlayerEntityModel(1, true);
 
 	public CosmeticsEditor(Identifier styleSheet) {
-		super(id("screen/style/cosmeticEditor.fabricpvp.css"));
+		super(id("screen/style/cosmeticEditor.css"));
 	}
 
 	@Override

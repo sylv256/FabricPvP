@@ -1,6 +1,6 @@
 package io.github.tehcjs.fabricpvp.mixin;
 
-import io.github.hydos.cscerns.minecraft.CSSSEvents;
+import io.github.hydos.cscerns.misc.CSSSEvents;
 import net.minecraft.client.MinecraftClient;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;

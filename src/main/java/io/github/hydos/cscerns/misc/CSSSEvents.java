@@ -1,4 +1,4 @@
-package io.github.hydos.cscerns.minecraft;
+package io.github.hydos.cscerns.misc;
 
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientLifecycleEvents;
 import net.fabricmc.fabric.api.event.Event;

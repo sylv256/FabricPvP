@@ -1,13 +1,13 @@
 package io.github.tehcjs.fabricpvp.mixin;
 
-import io.github.tehcjs.fabricpvp.screen.CSSTestScreen;
-import io.github.tehcjs.fabricpvp.screen.CosmeticEditorScreen;
+import io.github.hydos.cscerns.misc.CSSScreen;
 import io.github.tehcjs.fabricpvp.screen.AccountScreen;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.screen.TitleScreen;
 import net.minecraft.client.gui.widget.ButtonWidget;
 import net.minecraft.client.gui.widget.IdentifibleBooleanConsumer;
 import net.minecraft.client.resource.language.I18n;
+import net.minecraft.util.Identifier;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -30,7 +30,7 @@ public class TitleScreenMixin extends Screen implements IdentifibleBooleanConsum
 			ci.cancel();
 		}
 		if (button.id == 100) {
-			this.client.openScreen(new CSSTestScreen());
+			this.client.openScreen(new CSSScreen(new Identifier("fabricpvp", "screen/cosmeticScreen/cosmeticEditor")));
 		}
 	}
 }

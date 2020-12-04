@@ -1,8 +1,8 @@
 package io.github.hydos.cscerns.css;
 
-import io.github.hydos.cscerns.minecraft.CssMath;
-import io.github.hydos.cscerns.minecraft.CssProperties;
-import io.github.hydos.cscerns.minecraft.CssSelector;
+import io.github.hydos.cscerns.misc.CssMath;
+import io.github.hydos.cscerns.misc.CssProperties;
+import io.github.hydos.cscerns.misc.CssSelector;
 import org.w3c.dom.css.*;
 
 import java.util.HashMap;
